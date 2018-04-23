@@ -1,0 +1,75 @@
+body{
+	background-color: #D3D3D3;
+	width: 100vw;
+	margin: 0px;
+	padding: 0px;
+	color: #6C626D;
+	font-size: 25px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-top: 1px;
+}
+button{
+	background-color: #222023;
+	color: white;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;
+	font-weight: lighter;
+	border-radius: 5px;
+	border: 1px solid #222023;
+}
+button:hover{
+	background-color: #fff;
+	color: #222023;
+	cursor: pointer;
+	border: 1px solid #222023;
+}
+.adminLogout{
+	float: right;
+	margin-right: 230px;
+	margin-top: 25px;
+}
+.center{
+	clear: right;
+	margin: 0 auto;
+	margin-top: 120px;
+	text-align: center;
+}
+#addStudent{
+	margin-bottom: 5px;
+}
+#addStudent:hover{
+	margin-bottom: 5px;
+}
+p{
+	color: #000;
+}
+h1{
+	font-size: 20px;
+	color: #000;
+}
+select{
+	height: 30px;
+	width: 90px;
+	padding: 5px 10px;
+	margin-left: 5px;
+	margin-bottom: 8px;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	background-color: #D3D3D3;
+}
+select:hover{
+	margin: 0 auto;
+	background-color: #222023;
+	margin-bottom: 8px;
+	color: #fff;
+	cursor: pointer;
+}
+select option{
+	background-color: #222023;
+	color: #fff;
+	cursor: pointer;
+}
