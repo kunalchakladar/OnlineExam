@@ -6,3 +6,4 @@ window.onload = function () {
 		adminLoginButton.style.visibility = 'hidden';
 	}
 }
+
