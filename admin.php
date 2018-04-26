@@ -1,11 +1,14 @@
 <?php
 
 	session_start();
+
+	//checking for login or not
 	if(!isset($_SESSION['isAdmin'])){
 		header("Location: index.php");
 		exit();
 	}
 
+	//logging out
 	if (isset($_POST['admin_logout'])) {
 		unset($_SESSION['isAdmin']);
 		session_destroy();
@@ -24,16 +27,34 @@
 	        $address = $_POST['address'];
 	        $password = $_POST['password'];
 
-	        $query = "insert into student(username, fullname, email, ph, address, password) 
-						values('$username', '$fullname', '$email', '$ph', '$address', '$password');";
-	        mysqli_query($conn, $query);
-	        ?>
-		
-			<script type="text/javascript">
-				alert("Student added successfully");
-			</script>
-	
-	        <?php  	     
+	        //checking for existing email, username or phone number
+	        $query = "select * from student where username='$username' OR email='$email'
+				OR ph='$ph';";
+
+			$result = mysqli_query($conn, $query);
+			$row = mysqli_num_rows($result);
+			if($row > 0){
+				?>
+					
+					<script type="text/javascript">
+						alert("Username or email or phone number has been already registered");
+					</script>
+				
+				<?php
+			}else{
+
+			        $query = "insert into student(username, fullname, email, ph, address, password) 
+								values('$username', '$fullname', '$email', '$ph', '$address', '$password');";
+			        mysqli_query($conn, $query);
+			        ?>
+				
+					<script type="text/javascript">
+						alert("Student added successfully");
+					</script>
+			
+			        <?php  
+
+			}	        	     
 	        	        
 	    }
 	}
@@ -64,15 +85,15 @@
 		<p>Or</p>
 		<h1>Add Question</h1>
 
-		<form action="" method="">
+		<form action="questions.php" method="get">
 			<select name="subject">
 			  <option value="java">Java</option>
 			  <option value="php">PHP</option>
-			  <option value="sql">SQL</option>
+			  <option value="sql_q">SQL</option>
 			  <option value="android">Android</option>
 			</select>
 			<br>
-			<button type="submit">Go</button>
+			<button type="submit" name="go">Go</button>
 		</form>
 	</div>
 	<!-- Admin section ends -->
