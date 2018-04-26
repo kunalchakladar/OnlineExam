@@ -11,7 +11,8 @@
 		<button type="submit" class="adminLogout">Log Out</button>
 	</form>
 	
-	<div class="center">
+	<!-- Admin section -->
+	<div id="center">
 		<p>Welcome Admin</p>
 		<button id="addStudent">Add Student</button>
 		
@@ -29,6 +30,21 @@
 			<button type="submit">Go</button>
 		</form>
 	</div>
+	<!-- Admin section ends -->
+
+	<!-- Student form  -->
+	<form action="" id="studentForm" method="post">
+		<h1>Add Student</h1>
+		<input type="text" name="username" placeholder="Username"><br>
+		<input type="text" name="fullname" placeholder="Full name"><br>
+		<input type="text" name="email" placeholder="Email"><br>
+		<input type="text" name="ph" placeholder="Phone no."><br>
+		<input type="text" name="address" placeholder="Address"><br>
+		<input type="text" name="password" placeholder="Password"><br>
+		<input type="text" name="confirm_password" placeholder="Confirm password"><br>
+		<button type="submit" name="add">Add</button>
+	</form>
+	<!-- Student form ends -->
 
 </body>
 </html>

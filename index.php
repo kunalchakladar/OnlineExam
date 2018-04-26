@@ -27,7 +27,7 @@
     		<!-- Admin panel -->
             <div class="adminPanel">
                 <button id="adminLoginButton" class="adminLogin">Admin Login</button>
-                <form id="adminForm" action="" method="post">
+                <form id="adminForm" action="admin.php" method="post">
                     <input type="text" name="username" placeholder="Username">
                     <input type="password" name="password" placeholder="Password">
                     <button type="submit" name="login">Login</button>
